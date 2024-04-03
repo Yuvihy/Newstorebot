@@ -32,7 +32,7 @@ def is_enabled(value, default):
 # Owner Information
 API_ID = int(environ.get("API_ID", "24414837"))
 API_HASH = environ.get("API_HASH", "4b53a6bac944cf70d8579d5c56a0ab85")
-ADMINS = int(environ.get("ADMINS", ""))
+ADMINS = int(environ.get("ADMINS", "1252715736"))
 
 # Database Information
 CLONE_DB_URI = environ.get("CLONE_DB_URI", "")
@@ -54,8 +54,8 @@ AUTO_DELETE = int(environ.get("AUTO_DELETE", "5")) # Time in Minutes
 AUTO_DELETE_TIME = int(environ.get("AUTO_DELETE_TIME", "300")) # Time in Seconds
 
 # Channel Information
-LOG_CHANNEL = int(environ.get("LOG_CHANNEL", ""))
-FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).split()]
+LOG_CHANNEL = int(environ.get("LOG_CHANNEL", "-1001973921006"))
+FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1001979319683')).split()]
 
 # Don't Remove Credit Tg - @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
@@ -67,7 +67,7 @@ BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
 
 # Enable - True or Disable - False
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
-PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
+PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "False")), True)
 
 # Don't Remove Credit Tg - @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
@@ -79,7 +79,7 @@ class Var(object):
     name = str(getenv('name', 'filetolinkvjbot'))
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
     WORKERS = int(getenv('WORKERS', '4'))
-    BIN_CHANNEL = int(getenv('BIN_CHANNEL', ''))
+    BIN_CHANNEL = int(getenv('BIN_CHANNEL', '-1001973921006'))
     PORT = int(getenv('PORT', 8080))
     BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
     PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
